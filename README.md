@@ -12,7 +12,7 @@ EMCC NOTE - to compile all C language code to Javascript code
 
 then copy emcc.js into the working file per_emcc_my2.html 
 **AFTER these lines  ============================================================================================**
-<script type='text/javascript'>
+```<script type='text/javascript'>
 
 
 // --------------------------------------------------------------------------------------------------------------------
@@ -41,18 +41,18 @@ if (myLoc.indexOf('http://')==0){
 
 // =======================================================================================================
 // NOTE:  emcc.js GOES HERE   vvvvv  (jquery-3.2.1.js  or  jquery-3.2.1.min.js)  OR
-// NOTE:  emcc.js GOES HERE   vvvvv  (jquery-3.3.1.js  or  jquery-3.3.1.min.js)
+// NOTE:  emcc.js GOES HERE   vvvvv  (jquery-3.3.1.js  or  jquery-3.3.1.min.js)```
 **AFTER the above lines  ============================================================================================**
 
 
 **and BEFORE these lines  ============================================================================================**
-// 
+```// 
 // NOTE: per_emcc.js   output of sh per_emcc.sh  script to compile all C to JS  GOES ABOVE HERE 
 // =======================================================================================================
 // NOTE:  emcc.js GOES HERE   ^^^^^  (jquery-3.2.1.js  or  jquery-3.2.1.min.js)  OR
 // NOTE:  emcc.js GOES HERE   ^^^^^  (jquery-3.3.1.js  or  jquery-3.3.1.min.js)
 // =======================================================================================================
 
-//   ig2s_4_END    emcc.js  C CODE compiled to javascript
+//   ig2s_4_END    emcc.js  C CODE compiled to javascript```
 
 
