@@ -41,7 +41,8 @@ if (myLoc.indexOf('http://')==0){
 
 // =======================================================================================================
 // NOTE:  emcc.js GOES HERE   vvvvv  (jquery-3.2.1.js  or  jquery-3.2.1.min.js)  OR
-// NOTE:  emcc.js GOES HERE   vvvvv  (jquery-3.3.1.js  or  jquery-3.3.1.min.js)```
+// NOTE:  emcc.js GOES HERE   vvvvv  (jquery-3.3.1.js  or  jquery-3.3.1.min.js)
+```
 **AFTER the above lines  ============================================================================================**
 
 
@@ -53,6 +54,7 @@ if (myLoc.indexOf('http://')==0){
 // NOTE:  emcc.js GOES HERE   ^^^^^  (jquery-3.3.1.js  or  jquery-3.3.1.min.js)
 // =======================================================================================================
 
-//   ig2s_4_END    emcc.js  C CODE compiled to javascript```
+//   ig2s_4_END    emcc.js  C CODE compiled to javascript
+```
 
 
