@@ -5,8 +5,10 @@ See for yourself by direct personal experience if astrology works.
 
 for now,  see  "makekprod.sh"  and "cfns.sh"
 
-EMCC NOTE - to compile all C language code to Javascript code
-                *assumes the 14,000 files of emscripten are present*
+**EMCC NOTE**
+
+- to compile all C language code to Javascript code
+    *assumes the 14,000 files of emscripten are present*
 
 "emcc.sh" compiles all of the C language files-  output file is emcc.js
 
