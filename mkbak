@@ -10,6 +10,7 @@ export SHORT_NAME=free
 
 FILES_TO_BACKUP="
 cpToGithub.sh
+ig2sNameChange.sh
 linkedInProfile.txt
 cfns.sh
 goldCfns.txt
