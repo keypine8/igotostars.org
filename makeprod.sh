@@ -228,16 +228,32 @@ wc $OUTFIL ; head -2 $OUTFIL ;  echo "-----"; tail -2 $OUTFIL
 # export PROD_FILE_BEG="per_emcc_my2.html"
  
 
+export RED=`tput setab 1; tput setaf 7`
+export REVon=`tput rev`   # reverse video
+export Toff=`tput sgr0`
+
 
 # part 1 of 2 info
 echo "================================================================================"
 echo " PREPARE input file (prod_input.html) for this script (makeprod.sh) "
 echo "================================================================================"
 echo " "
-echo "  1. cp per_emcc_my2.html prod_input.html    "
-echo "  2. vi prod_input.html    "
+echo "${REVon} cp per_emcc_my2.html prod_input.html;  mvim prod_input.html ${Toff} "
 echo " "
 echo " BEFORE STARTING,  CHANGE prod_input.html "
+echo " "
+echo " UPDATE version number to next higher number   var gbls_${RED}versionT${Toff}OKEN = 'v03' ; "   
+echo "   for version id in middle button and restrict_access dialogue"
+echo " "
+echo "   CONSIDER commenting out  line below if there is no app icon"
+echo "      (' sharp imgAppEMBLEM') .css('display','block').css ..."
+echo "   CONSIDER changing   var gbls_thisAppDESCRIPTION  = 'free app igotostars.org' "
+echo "   CONIDER  changing   var gbls_thisAppOneWord      = 'igotostars' "  
+echo "   CONSIDER changing   var gbls_thisAppEMAIL        = 'boldly@igotostars.org' "
+echo "   CONSIDER changing   " echo " <title>igotostars, test astrology</title>
+  <meta name=\"Description\" content=\"With a scientific attitude of OPEN-MINDED SKEPTICISM, use igotostars to test if astrology works.\">
+  <meta name=\"keywords\" content=\"astrology, free, scientific, open-minded, igotostars\"> "
+echo " "
 echo " CONSIDER turning on temporary access restriction"
 echo "   //var gbls_restrict_access = 'yes';  // passcode due to testing"
 echo " "
@@ -246,7 +262,7 @@ echo "   because it has readable test people data"
 echo " "
 echo " CONSIDER turning off logging functions "
 echo "   A) in javascript - in prod_input.html"
-echo "      function smup_log()     // rkfns  ALSO smup_at(), smup_to() "
+echo "      funct${RED}ion smup_l${Toff}og()     // rkfns  ALSO smup_at(), smup_to() "
 echo "      return; // for production  "
 echo "      //  console.log();   // search for \"log STRATEGY\" "
 echo "   B) in C -  in rkdebug.c"
@@ -260,11 +276,11 @@ echo "        - emcc.js code  - C code compiled into javascript by emcc.sh"
 echo "        - jquery code"
 echo "        This code to be removed is together in one block"
 echo "        Go to the start of the code to be removed."
-echo "           Search for \"emcc.js GOES HERE   vvvvv\""
+echo "           Search for \"emcc.${RED}js GOES${Toff} HERE   vvvvv\""
 echo "        Go to the   end of the code to be removed."
-echo "           Search for \"JQUERY GOES HERE   ^^^^^\""
+echo "           Search for \"JQUER${RED}Y GOES${Toff} HERE   ^^^^^\""
 echo "        SAVE the approx 45,000 lines of code - about 10 megabytes"
-echo "           under the name \"save_jquery_emcc.js\" "
+echo "           under the name \"${RED}save_jquery_emcc.js${Toff}\""
 echo "        in vi, DELETE the approx 45,000 lines of code - about 10 megabytes"
 echo "  4. save the smaller prod_input.html"
 echo "================================================================================"
@@ -498,6 +514,7 @@ ed  <<-EOF   >/dev/null
 EOF
 
 
+
 #  DO NOT remove smup_log() lines
 echo "    -1. remove smup_log() lines"
 # echo "DO NOT remove smup_log() lines"
@@ -655,8 +672,8 @@ echo "shuffled replacement names are in $REPLACEMENT_NAMES"
 wc $REPLACEMENT_NAMES
 echo "----------------------------------------------------------"
 
-#echo "exit 3a  no replace"
-#exit 3 # for test
+# echo "exit 3a  no replace"
+# exit 3 # for test
 
 # ends here.  see script below
 #    produce $NAMES_TO_REPLACE  
@@ -720,7 +737,7 @@ echo "----------------------------------------------------------"
   echo " ========================================================================== "
 
   echo -n "" > goldgblsvar.txt
-  echo -n "" > goldidsinjs.txt
+  echo -n "" > goldidsinjs.txt    # comment out going with HARD-CODED  safer version
   echo -n "" > goldvarvars.txt 
   echo -n "" > goldjsfns.txt
   wc goldgblsvar.txt
@@ -764,9 +781,11 @@ echo "----------------------------------------------------------"
   echo ""
 
 
+  # NO HARD-CODED 20210421 # resort to HARD-CODED   goldidsinjs.txt   HARD-CODED    approx 433 
 
   echo "==========  3 of 4  ========================================================="
   echo " goldidsinjs.txt   approx 433 "
+  echo " resort to HARD-CODED  goldidsinjs.txt  HARD-CODED   approx 433 HARD-CODED"
 
  grep -o "\<id='[^']*'" prodtst.html >  replaceTmp1 # matches id=' ... up to FIRST '
 
@@ -795,7 +814,8 @@ ed <<-EOF >/dev/null
   w goldidsinjs.txt
   q
 EOF
-# cp idstemp  goldidsinjs.txt
+
+
   wc goldidsinjs.txt
   echo "_____________________________________________________________________________"
   echo ""
@@ -843,7 +863,35 @@ EOF
     # fyi export REPLACEMENT_NAMES="replacementnames.txt"
     #     export NAMES_TO_REPLACE="namestoreplace.txt"
 
-  cat  goldgblsvar.txt  goldidsinjs.txt  goldvarvars.txt goldjsfns.txt  > $NAMES_TO_REPLACE
+
+
+
+# cat  goldgblsvar.txt  goldidsinjs.txt  goldvarvars.txt goldjsfns.txt  > $NAMES_TO_REPLACE
+# cat  goldgblsvar.txt  goldidsinjs.txt  goldvarvars.txt goldjsfns.txt  > $NAMES_TO_REPLACE
+
+
+
+# FIND CULPRIT
+# echo "CULPRIT goldvarvars.txt  2    "
+#   cat  goldgblsvar.txt  goldidsinjs.txt                  goldjsfns.txt  > $NAMES_TO_REPLACE
+
+cat  goldgblsvar.txt  goldidsinjs.txt  goldvarvars.txt goldjsfns.txt | sort | uniq  >  $NAMES_TO_REPLACE
+
+# 
+# # cat  goldgblsvar.txt  goldidsinjs.txt  goldvarvars.txt goldjsfns.txt | sort | uniq  >  $NAMES_TO_REPLACE
+# # echo "CULPRIT goldvarvars.txt  UNIQ    "
+# 
+# cat  goldgblsvar.txt                   goldvarvars.txt goldjsfns.txt | sort | uniq  >  $NAMES_TO_REPLACE
+# echo "CULPRIT goldidsinjs.txt   ?? "
+# 
+# cat "CULPRIT was goldidsinjs.txt  "
+# 
+
+
+
+
+
+
 
   # special cases to rename
   echo "whereCalledFrom"       >>  $NAMES_TO_REPLACE
@@ -1073,6 +1121,7 @@ let pc="$diff * 100 / $LB"
 echo "   $diff  fewer lines       $pc percent"
 echo "-------------------------------------------------"
 
+echho {
 
 # part 2 of 2 info
 echo "================================================================================"
@@ -1080,25 +1129,29 @@ echo "FYI,  here the input file \"prod_input.html\" is changed"
 echo "      and renamed into \"prodtst.html\""
 echo " "
 echo "NOW,  finish making prodtst.html by PUTTING BACK  emcc.js and jquery to it"
-echo "  1. vi prodtst.html "
+echo "${REVon}    mvim prodtst.html ${Toff}"
 echo "  2.    in vi, "
 echo "        Go to the start of the code to be put back"
-echo "           Search for the line  \"<script type='text/javascript'>\" "
-echo "        On the next line read in the lines from the file you saved earlier- "
-echo "           \"save_jquery_emcc.js\"  "
-echo "  3.    :w prodtst.html "
+echo "           Search for the line  \"<script type='t${RED}ext/ja${Toff}vascript'>\" "
+echo "        On the next line READ IN the lines from the file you saved earlier- "
+echo "        ${RED}:r save_jquery_emcc.js ${Toff}"
+echo "  3.    ${RED}:w prodtst.html ${Toff}"
 echo " "
-echo "AFTERWARDS,  run cfns.sh "
+echo "AFTERWARDS, "
+echo "${REVon} sh cfns.sh ${Toff} "
 echo "             cfns.sh takes \"prodtst.html\" as input "
 echo "             and writes out a changed version of \"prodtst.html\" . "
 echo "             This \"prodtst.html\" is the final production version"  
-echo "  $ cp prodtst.html igotostars_PROD.html"
+echo "${REVon}   cp prodtst.html igotostars_PROD.html ${Toff} "
+echo "${REVon}   cp prodtst.html index.html ${Toff} "
 echo "================================================================================"
 echo " "
 echo "================================================================================"
 echo "for GITHUB  AND"
 echo " for updating goDaddy using /Users/rk/github_files/igotostars_PROD.html"
-echo "AFTERWARDS,  run cpToGithub.sh"
+echo " for updating goDaddy using index.html"
+echo "AFTERWARDS,"
+echo "${REVon}   sh cpToGithub.sh ${Toff}"
 echo "             creates  /Users/rk/github_files/non_emsdk.cpio"
 echo "for GITHUB"
 echo "================================================================================"
