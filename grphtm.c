@@ -1891,7 +1891,9 @@ trn("browser good relationship #1");
 
 
 //  g_fn_prtlin( "<div style=\"text-align: center; font-size: 66%; margin-top: 2vh; \" >produced by free app from iGo2stars.org</div>");
-  g_fn_prtlin( "<div style=\"text-align: center; font-size: 66%; margin-top: 2vh; \" >produced by free app igotostars.org</div>");
+  g_fn_prtlin( "<div class=\"iHaveAPP_DESC\" style=\"text-align: center; font-size: 66%; margin-top: 2vh; \" >produced by appDESCgoesHERE</div>");
+
+
   g_fn_prtlin( "<div style=\"text-align: center; font-size: 66%; font-weight: normal; color:#FF0000;\">This report is for entertainment purposes only</div><div><br></div>" );
 
 

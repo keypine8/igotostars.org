@@ -5717,7 +5717,10 @@ trn("futhtm.c END -->  now read and print aspects until we hit [end_aspects]");
 //  f_fnBIG_prtlin( "Your <span class='yellowShine'>intense willpower</span> can overcome and control your destiny </div>");
   f_fnBIG_prtlin( "Your <span class='yellowShine'>intense willpower</span> can<br>overcome and control your destiny </div>");
 
-  f_fnBIG_prtlin( "<div style=\"text-align: center; font-size: 66%; margin-top: 2vh; \" >produced by free app igotostars.org</div>");
+//  f_fnBIG_prtlin( "<div style=\"text-align: center; font-size: 66%; margin-top: 2vh; \" >produced by free app igotostars.org</div>");
+  f_fnBIG_prtlin( "<div class=\"iHaveAPP_DESC\" style=\"text-align: center; font-size: 66%; margin-top: 2vh; \" >produced by appDESCgoesHERE</div>");
+
+
   f_fnBIG_prtlin( "<div style=\"text-align: center; font-size: 66%; font-weight: bold; color:#FF0000;\">This report is for entertainment purposes only</div><div><br></div>" );
 
   f_fnBIG_prtlin("</div>");   // id=futBOTT

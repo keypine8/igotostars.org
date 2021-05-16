@@ -170,11 +170,6 @@ RANK_T_groupToDO
 RANK_fld_ARR
 RANK_fld_PSV
 RANK_longestName_LEN
-RCSPCR
-RCS_h
-RCS_w
-RCS_x
-RCS_y
 SAVEfirst_SLOTnum
 SC_h
 SC_vline_x
@@ -320,7 +315,6 @@ classesToAdd
 clear_h
 clear_w
 clickedOnNAVB
-clickedStarData
 col_benchG
 col_benchR
 col_goo
@@ -405,6 +399,7 @@ doing_this
 dotsizeBigger
 dotsizeThumbnail
 durationTouchStartToEND
+durationTouchStartToEND2
 edtp_hasChangedPERname
 egPER_name
 egPERencoded1
@@ -460,7 +455,7 @@ gbls_BMPE_groupToDO
 gbls_CITYPREVTypedSoFar
 gbls_CITYnameTypedSoFar
 gbls_COMP_words
-gbls_CSV_ofMembers_ofUSgrp;  //as of 20210310
+gbls_CSV_ofMembers_ofUSgrp
 gbls_CY_stressScore
 gbls_CYbig_canvasY_GREAT
 gbls_CYbig_canvasY_STRESS
@@ -686,8 +681,8 @@ gbls_imgHeight
 gbls_imgWidth
 gbls_infromRightFADEINS
 gbls_justClickedCenterBtn
-gbls_justClickedOnEDTP ='no'
-gbls_justClickedOnNEWP ='no'
+gbls_justClickedOnEDTP
+gbls_justClickedOnNEWP
 gbls_justDidHoverMenusel
 gbls_justTappedSizeBtn
 gbls_kingpin_isIn_group
@@ -815,7 +810,11 @@ gbls_test
 gbls_tg_returnSTRING
 gbls_tg_returnSTRING_work_space
 gbls_tg_year_of_birth
+gbls_thisAppDESCRIPTION
+gbls_thisAppEMAIL
+gbls_thisAppOneWord
 gbls_thisAppTOKEN
+gbls_thisAppshortURL
 gbls_thisELT_forOnHover
 gbls_timeOfLastTouchEnd
 gbls_timeOfLastTouchStart
@@ -832,6 +831,7 @@ gbls_topToGreatLine
 gbls_touch_pageY_save
 gbls_ts_year_of_birth
 gbls_useSizeBtnInsideCanvas
+gbls_versionTOKEN
 gbls_widthResizeEND
 gbls_widthResizeSTART
 gbls_windowHeight
@@ -884,6 +884,7 @@ inArrOfIntsDecoded
 inArrOfIntsEncoded
 inArrOfIntsEncodedAsString
 inArrOfStrRepresentingNumbers
+includeGEEKtext
 incomingCITYisLonger
 intForTN
 intervalBaseNum
@@ -935,6 +936,7 @@ member_birth_yyyy
 member_birth_yyyymmdd
 member_name
 metrics
+middleOfMSG
 minToUse
 min_y_pos
 mmAsNumber
@@ -950,6 +952,7 @@ myBDATE_yyyyEDIT
 myBase10int
 myBaseWidth
 myBoxWidth
+myBrowser
 myCITY
 myCOUN
 myCSVstringLEN48
@@ -1008,6 +1011,7 @@ myRepeatNum
 myReplacement
 myScrollLeftAmt
 mySecPerYr
+mySelEnd
 mySetIntervalMS
 myStartsWith
 myStringBuffForTraitCSV
@@ -1225,7 +1229,6 @@ starCenterCurr_x
 starCenterCurr_y
 starCenterPrev_x
 starCenterPrev_y
-starCover
 starNum
 starOffsetFromLoopDate
 starPikYr_h
@@ -1322,8 +1325,6 @@ trait_score_ARR
 trait_scores_CSV
 tstElt
 tstEltv
-tstEltw
-tstEltx
 tstTyp
 tstType41
 tstType61

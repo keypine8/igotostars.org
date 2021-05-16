@@ -389,7 +389,11 @@ gbls_test
 gbls_tg_returnSTRING
 gbls_tg_returnSTRING_work_space
 gbls_tg_year_of_birth
+gbls_thisAppDESCRIPTION
+gbls_thisAppEMAIL
+gbls_thisAppOneWord
 gbls_thisAppTOKEN
+gbls_thisAppshortURL
 gbls_thisELT_forOnHover
 gbls_timeOfLastTouchEnd
 gbls_timeOfLastTouchStart
@@ -406,6 +410,7 @@ gbls_topToGreatLine
 gbls_touch_pageY_save
 gbls_ts_year_of_birth
 gbls_useSizeBtnInsideCanvas
+gbls_versionTOKEN
 gbls_widthResizeEND
 gbls_widthResizeSTART
 gbls_windowHeight

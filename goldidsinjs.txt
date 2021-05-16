@@ -120,10 +120,10 @@ bmpe2LIST
 bmpeLIST
 bmpe_colHdr
 box_moreWords
-box_score_info
-box_score_info
-box_score_info
-box_score_info
+box_score_info_besD
+box_score_info_besY
+box_score_info_caly
+box_score_info_tend
 btim01
 btim02
 btim03
@@ -186,7 +186,6 @@ expandingGMMRImage
 expandingGraphImage
 expandingPersonImage
 expandingStarsImage
-expandingStartrackImage
 expandingTwosomeImage
 expandingimgMAMB
 expandingjumping4Image
@@ -237,8 +236,6 @@ gmenu2li_separator_2
 gmenu2li_separator_3
 gmenu2li_separator_4
 header_TEXT
-help_eg_chal
-help_eg_fav
 homeli_UnderNav
 homeli_botFill
 homgLIST
@@ -251,6 +248,7 @@ iconPlusAddGreen
 img5x2GR
 imgAppEMBLEM
 imgAppPURPOSE
+imgAppPURPOSE0
 imgAppearanceBTN
 imgCityOfBirth
 imgCity_orange
@@ -259,7 +257,7 @@ imgDOBfields
 imgEdtGrpName
 imgGrpMbrBTN
 imgHELP
-imgHELP_tend#butt
+imgHELP_tendBtn
 imgHELPcaly_Bad
 imgHELPcaly_Good
 imgHELPcyDestiny
@@ -292,7 +290,7 @@ imgToAdd_NEWP
 imgToSee_LSTG
 imgToSee_LSTP
 imgYearStarScore
-imgYearStarScore
+imgYearStarScore2
 img_seeLSTP
 jmgRoundHelpBTN
 jumpingGroup
@@ -332,6 +330,7 @@ myModalMOSM
 myModalNEWG
 myModalNEWP
 myModalPHOME
+myModalPHOME2
 myModalPMENU
 myModalPMENU2
 myModalRANK
@@ -440,10 +439,10 @@ smup_showxxBM
 smup_temp
 smup_tempCY
 smup_underNAVB
+starsWrapBESD
 starsWrapBESY
 starsWrapCALY
-starsWrapCALY
-starsWrapCALY
+starsWrapTEND
 tdGRAPHcanvas
 tdGRAPHdiv
 tempCYcanvas
