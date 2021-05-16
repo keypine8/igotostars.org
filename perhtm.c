@@ -1896,7 +1896,9 @@ int make_per_htm_file_browser( // smup - now writes code to char array at char *
 
 //  p_fn_prtlin( "<br><div style=\"width: 100%; margin-left: auto; margin-right: auto; font-size: 75%; \" >produced by free app from iGo2stars.org</div>");
 //  p_fn_prtlin( "<div style=\"text-align: center; font-size: 66%; margin-top: 2vh; \" >produced by free app from iGo2stars.org</div>");
-  p_fn_prtlin( "<div style=\"text-align: center; font-size: 66%; margin-top: 2vh; \" >produced by free app igotostars.org</div>");
+//  p_fn_prtlin( "<div style=\"text-align: center; font-size: 66%; margin-top: 2vh; \" >produced by free app igotostars.org</div>");
+  p_fn_prtlin( "<div class=\"iHaveAPP_DESC\" style=\"text-align: center; font-size: 66%; margin-top: 2vh; \" >produced by appDESCgoesHERE</div>");
+
   
 
 
