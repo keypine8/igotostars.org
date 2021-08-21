@@ -248,17 +248,19 @@ echo " "
 echo "   CONSIDER commenting out  line below if there is no app icon"
 echo "      (' sharp imgAppEMBLEM') .css('display','block').css ..."
 echo "   CONSIDER changing   var gbls_thisAppDESCRIPTION  = 'free app igotostars.org' "
-echo "   CONIDER  changing   var gbls_thisAppOneWord      = 'igotostars' "  
 echo "   CONSIDER changing   var gbls_thisAppEMAIL        = 'boldly@igotostars.org' "
-echo "   CONSIDER changing   " echo " <title>igotostars, test astrology</title>
-  <meta name=\"Description\" content=\"With a scientific attitude of OPEN-MINDED SKEPTICISM, use igotostars to test if astrology works.\">
-  <meta name=\"keywords\" content=\"astrology, free, scientific, open-minded, igotostars\"> "
+echo "   CONIDER  changing   var gbls_thisAppOneWord      = 'igotostars' "  
+
+# echo "   CONSIDER changing   " echo " <title>igotostars, test astrology</title>"
+#   <meta name=\"Description\" content=\"With a scientific attitude of OPEN-MINDED SKEPTICISM, use igotostars to test if astrology works.\">
+#  <meta name=\"keywords\" content=\"astrology, free, scientific, open-minded, igotostars\"> "
+
 echo " "
 echo " CONSIDER turning on temporary access restriction"
 echo "   //var gbls_restrict_access = 'yes';  // passcode due to testing"
-echo " "
-echo " CONSIDER commenting out body of function quickAddPeople() / testPER_put_into_LS()"
-echo "   because it has readable test people data"
+# echo " "
+# echo " CONSIDER commenting out body of function quickAddPeople() / testPER_put_into_LS()"
+# echo "   because it has readable test people data"
 echo " "
 echo " CONSIDER turning off logging functions "
 echo "   A) in javascript - in prod_input.html"
@@ -1121,7 +1123,6 @@ let pc="$diff * 100 / $LB"
 echo "   $diff  fewer lines       $pc percent"
 echo "-------------------------------------------------"
 
-echho {
 
 # part 2 of 2 info
 echo "================================================================================"

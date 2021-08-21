@@ -3,7 +3,7 @@
 export PROD_FILE_END="prodtst.html"
 
 
-#export MY_NAMES_TO_REPLACE="mamb_report_trait_rank\  eee
+#export MY_NAMES_TO_REPLACE="mamb_report_trait_rank\
 echo "\c" > myCfns.tmp
 
 echo "mamb_report_trait_rank
