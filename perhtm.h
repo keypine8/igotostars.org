@@ -227,7 +227,7 @@ struct aspect {
   {"p05203", "You are impatient and quick thinking but you drive too fast ."},
   {"p05204", "Avoid creating strife in the home ."},
   {"p05205", "You can be passionate in romance and in competition.  You could make a good coach ."},
-  {"p05206", "You could well in work involving tools- craftsman, engineer, tradesman, surgeon ."},
+  {"p05206", "You could do well in work involving tools- craftsman, engineer, tradesman, surgeon ."},
   {"p05207", "You have tendency to enter partnerships rather too quickly, and to try to dominate them once you're in ."},
   {"p05208", "You are extremely persistent- especially about money and are likely to get into disputes about money ."},
   {"p05209", "You have strong convictions about philosophy or politics.  You could enjoy outdoor sports like horseback riding, skiing or sailing ."},

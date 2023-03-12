@@ -9,8 +9,11 @@ BDATE_yyyy
 BDATE_yyyyEDIT
 BESD_DATE_DONE
 BTN_GhomeHELP_help
+BTN_GhomeHELP_help
 BTN_GhomeHELP_newG
+BTN_GhomeHELP_newG3
 BTN_GhomeHELP_person
+BTN_GhomeHELP_seeLSTP
 BTN_homeHELP_groups
 BTN_homeHELP_help
 BTN_homeHELP_newp
@@ -63,7 +66,6 @@ GPIKPli_UnderNav
 GPIKPli_botFill
 ICON_gHOME_help
 ICON_pHOME_FAQ
-ICON_pHOME_help
 IMG_sel_homg_MA
 IMG_sel_homg_MD
 IMG_sel_homg_ME
@@ -168,13 +170,15 @@ btim34
 btim35
 btim36
 btnPickyrAll
-buttons3
 buttons3G
+buttons3G
+buttons3P
 byrListContain
 compScoreboxDIV
 compScoreboxLIST
 comp_colHdr
-container3btns
+container3btnsG
+container3btnsP
 dateBTNS_DONE
 div2forIMGToAddNEWG
 div2foriconIMG
@@ -194,9 +198,9 @@ expandingGraphImage
 expandingPersonImage
 expandingStarsImage
 expandingTwosomeImage
-expandingimgMAMB
 expandingjumping4Image
 explain3
+explain3g
 explain5
 ftr_box_besD
 ftr_box_besY
@@ -272,8 +276,6 @@ imgHELPeg_graph
 imgHELPpikbt_H
 imgHELPpikbt_M
 imgLoadCard_4
-imgMAMB
-imgMAMBedit
 imgNEWG
 imgNEWP
 imgPERS_intro
@@ -304,6 +306,7 @@ imgYearStarScore
 imgYearStarScore2
 img_seeLSTP
 jmgRoundHelpBTN
+jmgRoundHelpBTNG
 jumpingGroup
 list_homgRPTMENU
 list_homgRPTMENU2

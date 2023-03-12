@@ -97,8 +97,8 @@
 
 
 
-int RKDEBUG=0;  /* =0 turns off output in all these debug functions */
-// int RKDEBUG=1;  /* =1 turns on   output in all these debug functions */
+int RKDEBUG=0;  /* =0 turns off output in all these debug functions  turn off C logging */
+// int RKDEBUG=1;  /* =1 turns on   output in all these debug functions  turn on C logging */
 
 
 void tspec(void);

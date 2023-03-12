@@ -77,7 +77,8 @@
 #include "rk.h"
 #include "grpdoc.h"
  
-#define GRP_FLAT_CSV_ARRAY_RECSIZ 48
+//#define GRP_FLAT_CSV_ARRAY_RECSIZ 48
+#define GRP_FLAT_CSV_ARRAY_RECSIZ 128
 //#define MAX_PERSONS_IN_GROUP 333      /* defined in incocoa.c and grpdoc.c and grphtm.c */
 #define MAX_PERSONS_IN_GROUP 258        /* defined in incocoa.c and grpdoc.c and grphtm.c */
 
@@ -129,7 +130,8 @@ struct rank_report_line {      /* info for html file production */
   char person_A[MAX_SIZE_PERSON_NAME+1];
   char person_B[MAX_SIZE_PERSON_NAME+1];
 };
-int gbl_maxLenDATALINE_grpone = 48;
+//int gbl_maxLenDATALINE_grpone = 48;
+int gbl_maxLenDATALINE_grpone = GRP_FLAT_CSV_ARRAY_RECSIZ;   // now 128  20230123
 
 /* trait_report_line array declarations */
 struct trait_report_line {
@@ -2966,18 +2968,21 @@ char *mamb_report_whole_group(    /* called from cocoa */
   num_persons_in_grp = atoi( arg_num_persons_in_grp );
 
 tn();tn();trn("in mamb_report_whole_group()");
-//ksn(html_file_name);
-//ksn(group_name);
-//ksn(arg_num_persons_in_grp);
-//kin(num_persons_in_grp);
-//ksn(in_GRP_FLAT_CSV_ARRAY);
-//ksn(instructions);
+ksn(html_file_name);
+ksn(group_name);
+ksn(arg_num_persons_in_grp);
+kin(num_persons_in_grp);
+ksn(in_GRP_FLAT_CSV_ARRAY);
+ksn(instructions);
 //ksn(string_for_table_only);
 
 /*  struct rank_report_line **out_rank_lines, */ /* output params returned */
   int kk, ii, irank, my_rank_number;
-  char current_person[64], other_person[64];
-  char SAVE_name_A[32], SAVE_name_B[32];
+//  char current_person[64], other_person[64];
+//  char SAVE_name_A[32], SAVE_name_B[32];
+  char current_person[256], other_person[256];
+  char SAVE_name_A[256], SAVE_name_B[256];
+
   struct rank_report_line my_rank_line;
   struct rank_report_line my_rank_line2;
   int  num_persons_in_cached_array;
@@ -3079,14 +3084,14 @@ tn();tn();trn("in mamb_report_whole_group()");
   {
 //    strcpy(current_person, in_csv_person_arr[kk]);
     memcpy(current_person, in_GRP_FLAT_CSV_ARRAY + (kk * GRP_FLAT_CSV_ARRAY_RECSIZ), GRP_FLAT_CSV_ARRAY_RECSIZ); // read from GRP_FLAT_CSV_ARRAY 
-//ksn(current_person);
+ksn(current_person);
 
     for (ii=kk+1; ii <= num_persons_in_grp - 1; ii++)   /* for each other_person */
     {
 
 //      strcpy(other_person, in_csv_person_arr[ii]);
       memcpy(other_person, in_GRP_FLAT_CSV_ARRAY + (ii * GRP_FLAT_CSV_ARRAY_RECSIZ), GRP_FLAT_CSV_ARRAY_RECSIZ); // read from GRP_FLAT_CSV_ARRAY 
-//ksn(other_person);
+ksn(other_person);
 
 
 
@@ -3107,8 +3112,8 @@ tn();tn();trn("in mamb_report_whole_group()");
 //      strcpy(SAVE_name_B, csv_get_field(in_csv_person_arr[ii], ",", 1));
       strcpy(SAVE_name_A, csv_get_field(current_person, ",", 1));
       strcpy(SAVE_name_B, csv_get_field(other_person,   ",", 1));
-//ksn(SAVE_name_A);
-//ksn(SAVE_name_B);
+ksn(SAVE_name_A);
+ksn(SAVE_name_B);
 
 
 
@@ -3127,7 +3132,7 @@ tn();tn();trn("in mamb_report_whole_group()");
         num_persons_in_cached_array
       );
       global_pair_a_compatibility_score = global_pair_compatibility_score;
-//kin(global_pair_a_compatibility_score );
+kin(global_pair_a_compatibility_score );
       /* char nam1[32]; char nam2[32];
       * strcpy(nam1, csv_get_field(current_person,",",1));
       * strcpy(nam2, csv_get_field(other_person,",",1));
@@ -3144,7 +3149,7 @@ tn();tn();trn("in mamb_report_whole_group()");
         num_persons_in_cached_array
       );
       global_pair_b_compatibility_score = global_pair_compatibility_score;
-//kin(global_pair_b_compatibility_score );
+kin(global_pair_b_compatibility_score );
 
       /* fprintf(stdout,"%d|%d|%d|\n", global_pair_a_compatibility_score,
       * global_pair_b_compatibility_score,
@@ -3398,6 +3403,7 @@ trn("after sort of data for mamb_report_whole_group()");
   // NOTE:  gbm_returnSTRING_work_space is put full of '\0' in JS
   // 
   // loop out_rank_lines array and place fixed length recs into string  gbm_returnSTRING_work_space
+  // 
   char wholeGroup_rptSTR[gbl_maxLenDATALINE_grpone];  // int gbl_maxLenDATALINE_grpone = 48;
 //  char wholeGroup_rptSTR[256];
   char wholeGroup_rptSTR_fld_1[64];
@@ -3490,6 +3496,9 @@ diffp = num_pairs_to_rank - i_bot_this_many ;
 //int tlen; tlen = strlen(wholeGroup_rptSTR); 
 //tr("BMGRwillW_B");ki(rr);ki(tlen);ki(wholeGroup_writeIDX ); ksn(wholeGroup_rptSTR);
 
+ // loop out_rank_lines array and place fixed length recs into string  gbm_returnSTRING_work_space
+ //
+ks("Mx");kin(wholeGroup_writeIDX );
       memcpy(
         gbm_returnSTRING_work_space + wholeGroup_writeIDX * strlen(wholeGroup_rptSTR),  // ASSUMPTION:  out_rank_lines is always fixed-length (39 here) 
         wholeGroup_rptSTR,
@@ -3498,6 +3507,7 @@ diffp = num_pairs_to_rank - i_bot_this_many ;
       wholeGroup_writeIDX = wholeGroup_writeIDX + 1 ;
       betweenTop200_Bot100 = 0;
     }
+
     // ---------------------------------------------------------------------------------
 
 
@@ -3547,7 +3557,7 @@ diffp = num_pairs_to_rank - i_bot_this_many ;
         out_rank_lines[rr]->person_B
       );
 
-//tr("M");ki(rr);ksn(wholeGroup_rptSTR);
+tr("Mx");ki(rr);ksn(wholeGroup_rptSTR);
 //tr("M");ki(rr); ki(wholeGroup_writeIDX ); ksn(wholeGroup_rptSTR);
 //tr("bmgrW_M");ki(rr); ki(wholeGroup_writeIDX ); ksn(wholeGroup_rptSTR);
 
@@ -3696,6 +3706,7 @@ ksn("PRINT top200 LINE");
 
   g_rank_line_free(out_rank_lines, out_rank_line_idx);   // when finished, free arr elements 
 
+ksn(gbm_returnSTRING_work_space);
   return(gbm_returnSTRING_work_space); // text data for JS to build html with
   // 
   // RETURN data that JS will use to build the HTML   (this is return for mamb_report_whole_group() )

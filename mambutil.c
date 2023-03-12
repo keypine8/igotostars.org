@@ -1326,7 +1326,8 @@ int binsearch_person_in_cache(
 char *csv_get_field(char *csv_string, char *delim, int want_fieldnum) {   // fieldnum is one-based
   char * pNewField, workbuf[4096];
   int field_idx;
-  
+ ksn("in csv_get_field");
+ ks(delim); kin(want_fieldnum);
   /* strtok overwrites the string you give it, so give it a buffer copy
   */
   strcpy(workbuf, csv_string);  /* strtok overwrites the string you give it */

@@ -34,7 +34,11 @@ gbls_BMPE_groupToDO
 gbls_CITYPREVTypedSoFar
 gbls_CITYnameTypedSoFar
 gbls_COMP_words
-gbls_CSV_ofMembers_ofUSgrp
+gbls_CSV_mbrs_leafs_ALL
+gbls_CSV_mbrs_leafs_DEF
+gbls_CSV_mbrs_leafs_FWD
+gbls_CSV_mbrs_leafs_NET
+gbls_CSV_mbrs_topBananas
 gbls_CY_stressScore
 gbls_CYbig_canvasY_GREAT
 gbls_CYbig_canvasY_STRESS
@@ -288,8 +292,11 @@ gbls_mousemoveIsTriggered
 gbls_my_targetCL
 gbls_my_targetID
 gbls_myvals
-gbls_name_US_2020
 gbls_name_allPeople
+gbls_name_leafs_ALL
+gbls_name_leafs_DEF
+gbls_name_leafs_FWD
+gbls_name_leafs_NET
 gbls_name_peopleIadded
 gbls_name_topBananas
 gbls_navReason

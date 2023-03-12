@@ -15,22 +15,27 @@ cd $DIR_TO_COPY_FROM
 # icon*
 # appNav*
 
+# remove big files to copy to github
+#
+#igotostars_PROD.html
+#prodtst.html
+#
+# remove big files to copy to github
+
 FILES_TO_COPY="
-cpToGithub.sh
-igotostarsDevel_info.txt
-igotostarsDevel_emsdkFiles.txt
-per_emcc_my2.html
-prodtst.html
-igotostars_PROD.html
-emcc.sh
-cfns.sh
-jquery-3.3.1.js
-save_jquery
-save_emcc.js
 MAMB_mindmap.m
-mkbak
-makeprod.sh
-namesToReplace.sh
+Makefile
+OLD.txt
+cfns.sh
+console.c
+cpToGithub.sh
+emcc.sh
+futasp.c
+futdefs.h
+futdoc.c
+futdoc.h
+futhtm.c
+futhtm.h
 goldCfns.txt
 goldclassesinC.txt
 goldclassesinjs.txt
@@ -40,36 +45,36 @@ goldidsinjs.txt
 goldnames.txt
 goldparams.txt
 goldvarvars.txt
-shuffle.sh
-OLD.txt
-console.c
-s.sh
-prunehtml.sh
-macVimSynHIcategories.txt
-gvimrc_SAVE_20200131_HTMLandJS
+grpdoc.c
+grpdoc.h
 grphtm.c
+gvimrc_SAVE_20200131_HTMLandJS
+igotostarsDevel_emsdkFiles.txt
+igotostarsDevel_info.txt
 incocoa.c
 incocoa.h
+jquery-3.3.1.js
+macVimSynHIcategories.txt
+makeprod.sh
+mambutil.c
+mkbak
+namesToReplace.sh
+per_emcc_my2.html
 perdoc.c
 perdoc.h
 perhtm.c
 perhtm.h
-futasp.c
-futdefs.h
-futdoc.c
-futdoc.h
-futhtm.c
-futhtm.h
-grpdoc.c
-grpdoc.h
-mambutil.c
+prunehtml.sh
 rk.h
 rkdebug.c
 rkdebug.h
 rkdebug_externs.h
 rktest.c
 rktest.sh
-Makefile"
+s.sh
+save_emcc.js
+save_jquery
+shuffle.sh"
 
 
 for fil in $FILES_TO_COPY
@@ -84,8 +89,13 @@ do
   #
 done  
 
-# put non-emdsk files into cpio
-echo  "$FILES_TO_COPY"  |  cpio -o  > $DIR_TO_COPY_TO/non_emsdk.cpio
+
+# 20230312  do not do
+# 
+# # put non-emdsk files into cpio
+# echo  "$FILES_TO_COPY"  |  cpio -o  > $DIR_TO_COPY_TO/non_emsdk.cpio
+# 
+# 20230312  do not do
 
 
 

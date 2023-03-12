@@ -42,7 +42,9 @@
 /* #include "incocoa.h" */
 
  
-#define GRP_FLAT_CSV_ARRAY_RECSIZ 48
+//#define GRP_FLAT_CSV_ARRAY_RECSIZ 48
+#define GRP_FLAT_CSV_ARRAY_RECSIZ 128
+
 //#define MAX_PERSONS_IN_GROUP 333      /* defined in incocoa.c and grpdoc.c and grphtm.c */
 //char gbl_grpFlatArrayOfCSVs[ GRP_FLAT_CSV_ARRAY_RECSIZ *  MAX_PERSONS_IN_GROUP ]; 
 char gbl_grpFlatArrayOf_2_CSVs[ GRP_FLAT_CSV_ARRAY_RECSIZ *  2 ];   // for  use in mamb_report_just_2_people()

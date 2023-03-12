@@ -59,8 +59,8 @@ void Xtr(char *srk);
 #include <stdio.h>
 #include <ctype.h>
 FILE *fpdb;
-int RKDEBUG=1;
-//int RKDEBUG=0;
+//int RKDEBUG=1;
+int RKDEBUG=0;
 
 void tspec(void) { } 
 

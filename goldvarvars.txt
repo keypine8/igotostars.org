@@ -25,8 +25,13 @@ $gbls_showRPGR
 $gbls_showRPPE
 $gbls_showRPST
 $gbls_showxxBM
-ARR_ofMembers_ofUSgrp
 ARR_of_MBRsToBeRemoved
+ARR_of_leafs
+AisDEF
+AisFWD
+AisHockeyPlayer
+AisMGR
+AisNET
 BESD_A_formatted
 BESD_A_no_space
 BESD_benchmark_BG
@@ -97,6 +102,11 @@ BMPE_score_I
 BMPE_score_in_fld2
 BMPE_starH1
 BMPE_starW1
+BisDEF
+BisFWD
+BisHockeyPlayer
+BisMGR
+BisNET
 CHKnumDaysInMth
 CO_allDataLinesARR
 CO_scoreBoxDataARR
@@ -104,6 +114,7 @@ CO_scoreBoxDataSSV
 COstarImg_ID
 CSV_curr_per
 CSV_fromCache
+CSV_of_leafs
 CY_allDataLinesARR
 CYcanvasDEST
 CYcanvasSRC
@@ -211,8 +222,11 @@ TSstar_index
 TSstar_score
 TSstar_year
 UL_has_TopBananas
-UL_has_US_2020
 UL_has_allPeople
+UL_has_leafs_ALL
+UL_has_leafs_DEF
+UL_has_leafs_FWD
+UL_has_leafs_NET
 UL_has_peopleIadded
 YrDIV11offset
 YrDIV1offset
@@ -455,7 +469,11 @@ gbls_BMPE_groupToDO
 gbls_CITYPREVTypedSoFar
 gbls_CITYnameTypedSoFar
 gbls_COMP_words
-gbls_CSV_ofMembers_ofUSgrp
+gbls_CSV_mbrs_leafs_ALL
+gbls_CSV_mbrs_leafs_DEF
+gbls_CSV_mbrs_leafs_FWD
+gbls_CSV_mbrs_leafs_NET
+gbls_CSV_mbrs_topBananas
 gbls_CY_stressScore
 gbls_CYbig_canvasY_GREAT
 gbls_CYbig_canvasY_STRESS
@@ -709,8 +727,11 @@ gbls_mousemoveIsTriggered
 gbls_my_targetCL
 gbls_my_targetID
 gbls_myvals
-gbls_name_US_2020
 gbls_name_allPeople
+gbls_name_leafs_ALL
+gbls_name_leafs_DEF
+gbls_name_leafs_FWD
+gbls_name_leafs_NET
 gbls_name_peopleIadded
 gbls_name_topBananas
 gbls_navReason
@@ -850,7 +871,6 @@ glbs_dall_msbeg
 gmbrLIST_personNAME
 graph_leftMarg
 group_SEARCH_RESULT
-grpMbrName
 grpMbr_is_examplePerson
 grpname
 hash1
@@ -858,6 +878,8 @@ heightEachStar1
 heightEachStar2
 heightEachStar3
 height_curr
+helpBlinkCnt
+help_ID_of_setInterval_timer
 hh_alone
 hh_ampm
 hh_mm
@@ -968,7 +990,6 @@ myDate2daysBack
 myDelayTG
 myDiffInHeight
 myDistanceToViewportTOP
-myEGgrp_member_name
 myEltString
 myFLD_inputGroupName
 myFLD_inputPersonName
@@ -981,7 +1002,6 @@ myHexString
 myHexStringAltered
 myHomeWidth
 myHowLong
-myImgWidth
 myIndexOf3
 myKEY
 myLI
@@ -989,6 +1009,7 @@ myLI_H
 myLI_HeightFromTop
 myLSname
 myLeadingSpace
+myLeafs_ARR
 myLeftMargin
 myLeftMargin2
 myLineNum
@@ -1031,14 +1052,12 @@ myWriteY
 myWrkStr1
 myWrkStr2
 myYearOfBirth_INT
-my_CSV_ofMembers_ofEGgrp
 my_Mth
 my_PER_CSV
 my_TGanimateDuration
 my_TGtranslateXamt
 my_TSanimateDuration
 my_TStranslateXamt
-my_comma
 my_csvCNT
 my_currTEND_yyyy
 my_day_of_184
@@ -1047,6 +1066,7 @@ my_diff
 my_doy
 my_el
 my_formatted_date
+my_leaf_name
 my_lskey
 my_minute_I
 my_minute_S
