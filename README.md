@@ -3,6 +3,8 @@ See for yourself by direct personal experience if astrology works.
 
   This README.md file is under construction.
 
+the 20230312 files are the latest (hashockey players)
+
 for now,  see  "makekprod.sh"  and "cfns.sh"
 
 **EMCC NOTE**
